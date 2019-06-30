@@ -27,7 +27,7 @@ namespace Tests.DayOne
         }
 
         [Fact]
-        public void DeviceCalibrator_Constructor_FileNotFOundExceptionThrown()
+        public void DeviceCalibrator_Constructor_FileNotFoundExceptionThrown()
         {
             Assert.Throws<FileNotFoundException>(() => new DeviceCalibrator("This/Is/Not/A/Real/Directory"));
         }
