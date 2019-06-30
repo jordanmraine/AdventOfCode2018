@@ -44,6 +44,7 @@ namespace ConsoleApp
         {
             DeviceCalibrator deviceCalibrator = new DeviceCalibrator(filePath);
             Out.WriteLine($"Device calibration value: {deviceCalibrator.GetCalibrationValue(0)}");
+            Out.WriteLine($"First repeated sum: {deviceCalibrator.GetFirstRepeatedSum()}");
         }
     }
 }

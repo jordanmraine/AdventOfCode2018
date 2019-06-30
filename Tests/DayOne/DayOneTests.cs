@@ -46,5 +46,24 @@ namespace Tests.DayOne
             int calibratedNumber = deviceCalibrator.GetCalibrationValue(0);
             Assert.Equal(31, calibratedNumber);
         }
+
+        [Fact]
+        public void DeviceCalibrator_GetFirstRepeatedSum_FormatExceptionThrown()
+        {
+            DeviceCalibrator deviceCalibrator = new DeviceCalibrator(ContainsLettersFilePath);
+            Assert.Throws<FormatException>(() => deviceCalibrator.GetFirstRepeatedSum());
+        }
+
+        [Theory]
+        [InlineData("sampleOne.txt", 0)]
+        [InlineData("sampleTwo.txt", 10)]
+        [InlineData("sampleThree.txt", 5)]
+        [InlineData("sampleFour.txt", 14)]
+        public void DeviceCalibrator_GetFirstRepeatedSum_Succeeds(string fileName, int expectedValue)
+        {
+            DeviceCalibrator deviceCalibrator = new DeviceCalibrator($"{Directory.GetCurrentDirectory()}/DayOne/{fileName}");
+            int result = deviceCalibrator.GetFirstRepeatedSum();
+            Assert.Equal(expectedValue, result);
+        }
     }
 }
