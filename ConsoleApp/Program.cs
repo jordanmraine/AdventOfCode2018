@@ -4,6 +4,7 @@ using Kirkin.CommandLine;
 
 using DayOne;
 using DayTwo;
+using DayThree;
 
 namespace ConsoleApp
 {
@@ -41,6 +42,15 @@ namespace ConsoleApp
                     cmd.Executed += (s, e) => ExecuteDayTwoCommand(e.Args.GetOption("file"));
                 });
 
+                parser.DefineCommand("day-three", cmd =>
+                {
+                    cmd.Help = "Executes day three of the Advent of Code 2018 exercise";
+
+                    cmd.AddOption("file", positional: true, help: "(Required) File path of the input .txt file");
+
+                    cmd.Executed += (s, e) => ExecuteDayThreeCommand(e.Args.GetOption("file"));
+                });
+
                 parser.Parse(args)
                     .Execute();
             }
@@ -62,6 +72,12 @@ namespace ConsoleApp
             InventoryManagementSystem inventoryManagementSystem = new InventoryManagementSystem(filePath);
             Out.WriteLine($"Check sum: {inventoryManagementSystem.GetChecksum()}");
             Out.WriteLine($"Common string: {inventoryManagementSystem.GetLettersCommonBetweenCorrectBoxes()}");
+        }
+
+        private static void ExecuteDayThreeCommand(string filePath)
+        {
+            SantaSuitFabricCalculator santaSuitFabricCalculator = new SantaSuitFabricCalculator(filePath);
+            Out.WriteLine($"Number of overlapping squares: {santaSuitFabricCalculator.GetNumberOfOverlappingSquares()}");
         }
     }
 }
