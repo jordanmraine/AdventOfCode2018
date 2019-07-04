@@ -61,6 +61,7 @@ namespace ConsoleApp
         {
             InventoryManagementSystem inventoryManagementSystem = new InventoryManagementSystem(filePath);
             Out.WriteLine($"Check sum: {inventoryManagementSystem.GetChecksum()}");
+            Out.WriteLine($"Common string: {inventoryManagementSystem.GetLettersCommonBetweenCorrectBoxes()}");
         }
     }
 }
