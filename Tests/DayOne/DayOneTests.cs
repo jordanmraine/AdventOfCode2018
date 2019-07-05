@@ -3,7 +3,7 @@ using System.IO;
 
 using Xunit;
 
-using DayOne;
+using Solutions.DayOne;
 
 namespace Tests.DayOne
 {

@@ -55,17 +55,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DayOne\DayOne.csproj">
-      <Project>{31ce3ae9-9055-4135-a411-0748a7867d95}</Project>
-      <Name>DayOne</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DayThree\DayThree.csproj">
-      <Project>{763F0542-B91A-4FB5-8943-72E11A6B9D5D}</Project>
-      <Name>DayThree</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DayTwo\DayTwo.csproj">
-      <Project>{a5237328-0bcc-4163-a0af-3769a1d60903}</Project>
-      <Name>DayTwo</Name>
+    <ProjectReference Include="..\Solutions\Solutions.csproj">
+      <Project>{9d66811d-08f1-4795-b822-e77a6676710a}</Project>
+      <Name>Solutions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

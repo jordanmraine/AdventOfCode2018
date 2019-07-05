@@ -2,9 +2,9 @@
 
 using Kirkin.CommandLine;
 
-using DayOne;
-using DayTwo;
-using DayThree;
+using Solutions.DayOne;
+using Solutions.DayTwo;
+using Solutions.DayThree;
 
 namespace ConsoleApp
 {
@@ -78,6 +78,7 @@ namespace ConsoleApp
         {
             SantaSuitFabricCalculator santaSuitFabricCalculator = new SantaSuitFabricCalculator(filePath);
             Out.WriteLine($"Number of overlapping squares: {santaSuitFabricCalculator.GetNumberOfOverlappingSquares()}");
+            Out.WriteLine($"Claim ID with no overlapping squares: {santaSuitFabricCalculator.GetFabricClaimIdOfNonOverlappingClaim()}");
         }
     }
 }

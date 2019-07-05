@@ -13,9 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DayOne\DayOne.csproj" />
-    <ProjectReference Include="..\DayThree\DayThree.csproj" />
-    <ProjectReference Include="..\DayTwo\DayTwo.csproj" />
+    <ProjectReference Include="..\Solutions\Solutions.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,7 +35,16 @@
     <None Update="DayOne\sampleTwo.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="DayThree\multipleUniqueClaims.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DayThree\noUniqueClaims.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="DayThree\part1Sample1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DayThree\part2Sample1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="DayTwo\noCommonStrings.txt">
