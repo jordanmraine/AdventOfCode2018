@@ -1,25 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
 namespace Solutions.DayOne
 {
-    public class DeviceCalibrator
+    public class DeviceCalibrator: AdventOfCodeBase
     {
-        public string FilePath { get; set; }
-
         /// <summary>
         /// Calibrates a device.
         /// </summary>
         /// <param name="filePath">File path of values to calibrate device with</param>
-        public DeviceCalibrator(string filePath)
-        {
-            if (string.IsNullOrEmpty(filePath)) throw new ArgumentNullException(nameof(filePath));
-            if (!File.Exists(filePath)) throw new FileNotFoundException(filePath);
-
-            FilePath = filePath;
-        }
+        public DeviceCalibrator(string filePath) : base(filePath) { }
 
         /// <summary>
         /// Gets the calibration value.

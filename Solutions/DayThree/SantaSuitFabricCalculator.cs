@@ -6,21 +6,13 @@ using System.Text.RegularExpressions;
 
 namespace Solutions.DayThree
 {
-    public class SantaSuitFabricCalculator
+    public class SantaSuitFabricCalculator: AdventOfCodeBase
     {
-        public string FilePath { get; set; }
-
         /// <summary>
         /// Inventory management system.
         /// </summary>
         /// <param name="filePath">File path of values to calibrate device with</param>
-        public SantaSuitFabricCalculator(string filePath)
-        {
-            if (string.IsNullOrEmpty(filePath)) throw new ArgumentNullException(nameof(filePath));
-            if (!File.Exists(filePath)) throw new FileNotFoundException(filePath);
-
-            FilePath = filePath;
-        }
+        public SantaSuitFabricCalculator(string filePath) : base(filePath) { }
 
         /// <summary>
         /// Calculates the number of overlapping squares from all claims.
